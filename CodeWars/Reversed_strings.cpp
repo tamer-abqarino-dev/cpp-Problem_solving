@@ -6,9 +6,10 @@ Complete the solution so that it reverses the string passed into it.
 */
 
 #include <string>
+#include <iostream>
 using namespace std ;
 
-string reverseString(const std::string &str)
+string reverseString(const string& str)
 {
     string reversed = "" ;
     for (int i = str.length()-1 ; i >= 0 ; i-- )
@@ -17,4 +18,13 @@ string reverseString(const std::string &str)
     }
 
     return reversed ;
+}
+int main()
+{
+    string str ;
+    cout << "Enter the string you need to revers : " ;
+    cin >> str ;
+    string result = reverseString(str) ;
+    cout << result ;
+    return 0;
 }
